@@ -20,7 +20,7 @@ const Contact = () => {
                                           <label class="label">
                                                 <span class="label-text">Comments</span>
                                           </label>
-                                          <textarea type="text" placeholder="Write your thoughts...." class="input input-bordered" ></textarea>
+                                          <textarea type="text" placeholder="Write your thoughts...." class="input-bordered textarea" ></textarea>
 
                                     </div>
                                     <div class="form-control mt-6">
