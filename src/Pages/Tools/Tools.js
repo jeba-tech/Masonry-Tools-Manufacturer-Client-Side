@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Tool from '../Tool/Tool';
+import './Tools.css';
 
 const Tools = () => {
+
+      const [tools, setBooks] = useState([]);
+      useEffect(() => {
+            fetch('http://localhost:5000/tool')
+                  .then(res => res.json())
+                  .then(data => setBooks(data));
+      }, [])
       return (
-            <div>
+            <div id='books'>
+                  <h1 className='service-title title'>Masonry Tools</h1>
+
+                  <div className='services-container'>
+                        {
+                              tools.map(tool => <Tool
+                                    key={tool._id}
+                                    tool={tool}
+                              ></Tool>)
+                        }
+                  </div>
+
+
 
             </div>
       );

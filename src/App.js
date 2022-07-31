@@ -8,6 +8,7 @@ import Login from './Pages/Login/Login';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
 import BusinessSummary from './Pages/BusinessSummary/BusinessSummary';
+import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blogs" element={<Blogs />}></Route>
+        <Route path="/tool/:toolId" element={<Purchase></Purchase>}></Route>
         <Route path="/BusinessSummary" element={<BusinessSummary></BusinessSummary>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
 
