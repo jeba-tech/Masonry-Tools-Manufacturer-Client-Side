@@ -1,10 +1,4 @@
-.qn-container {
-      display: flex;
-      margin: 20px;
-      margin-left: 10px;
-}
-
-.qn-title {
+.title {
       text-align: center;
       color: brown;
       font-size: 26px;

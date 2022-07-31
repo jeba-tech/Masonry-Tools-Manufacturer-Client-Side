@@ -1,6 +1,9 @@
 .title {
       text-align: center;
       color: brown;
+      font-size: 26px;
+      margin-top: 20px;
+      font-weight: 700;
 }
 
 .about {
