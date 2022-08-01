@@ -21,7 +21,6 @@ const Purchase = () => {
                   <h1 className='mt-5 ms-5'>Book Name:{tool.name}</h1>
                   <h1 className='mt-5 ms-5'>Book Price:{tool.price}</h1>
                   <h1 className='mt-5 ms-5'>Book Quantity:{tool.quantity}</h1>
-                  <h1 className='mt-5 ms-5'>Supplier Name:{tool.supplierName}</h1>
                   <h1 className='mt-5 ms-5'>Description:{tool.address}</h1>
 
 
