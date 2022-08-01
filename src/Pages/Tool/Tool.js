@@ -6,7 +6,7 @@ const Tool = ({ tool }) => {
       const { _id, name, photograph, price, address, quantity, minimumorderquantity } = tool;
       const navigate = useNavigate();
       const navigateToServiceDetail = id => {
-            navigate(`/tool/${id}`)
+            navigate(`/purchase/${id}`)
       }
       return (
             <div className='service'>

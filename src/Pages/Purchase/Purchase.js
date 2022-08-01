@@ -6,7 +6,7 @@ const Purchase = () => {
       const { toolId } = useParams();
       const [tool, setBook] = useState({});
       useEffect(() => {
-            const url = `http://localhost:5000/tool/${toolId}`;
+            const url = `http://localhost:5000/purchase/${toolId}`;
             fetch(url)
                   .then(res => res.json())
                   .then(data => setBook(data));
@@ -16,18 +16,17 @@ const Purchase = () => {
             <div className='detail'>
                   <h1 className='mt-5 ms-5'>welcome to Inventory</h1>
                   <h1 className='mt-5 ms-5'>ID:{toolId}</h1>
-                  <img className='service-img ms-5' src={tool.photograph} />
-
-                  <h1 className='mt-5 ms-5'>Book Name:{tool.name}</h1>
-                  <h1 className='mt-5 ms-5'>Book Price:{tool.price}</h1>
-                  <h1 className='mt-5 ms-5'>Book Quantity:{tool.quantity}</h1>
-                  <h1 className='mt-5 ms-5'>Description:{tool.address}</h1>
-
+                  <Link className='btn btn-outline-dark inventory-btn ' to="/purchaseDetails/${toolId}">Product Details</Link>
 
 
 
             </div>
       );
+
+
+
+
+
 };
 
 export default Purchase;
