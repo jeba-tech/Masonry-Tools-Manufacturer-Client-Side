@@ -13,7 +13,7 @@ const Navbar = () => {
       const menueItems = <>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/services">services</Link></li>
+            <li><Link to="/tools">Products</Link></li>
             <li><Link to="/blogs">Blogs</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><span>{user?.displayName && user.displayName}</span></li>

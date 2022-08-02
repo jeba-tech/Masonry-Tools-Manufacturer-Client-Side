@@ -12,6 +12,9 @@ import Purchase from './Pages/Purchase/Purchase';
 import SignUp from './Pages/SignUp/SignUp';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import PurchaseDetails from './Pages/PurchaseDetails/PurchaseDetails';
+import Tool from './Pages/Tool/Tool';
+import Tools from './Pages/Tools/Tools';
+import Contact from './Pages/Home/Contact';
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="tools" element={<Tools></Tools>} />
+        <Route path="contact" element={<Contact></Contact>} />
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="purchase/:toolId" element={
           <RequireAuth>
