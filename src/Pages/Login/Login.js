@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
       const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -15,16 +16,18 @@ const Login = () => {
             error,
       ] = useSignInWithEmailAndPassword(auth);
 
+      const [token] = useToken(user || gUser);
+
       let signInError;
       const navigate = useNavigate();
       const location = useLocation();
       let from = location.state?.from?.pathname || "/";
 
       useEffect(() => {
-            if (user || gUser) {
+            if (token) {
                   navigate(from, { replace: true });
             }
-      }, [user, gUser, from, navigate])
+      }, [token, from, navigate])
 
       if (loading || gLoading) {
             return <Loading></Loading>
@@ -37,6 +40,7 @@ const Login = () => {
       const onSubmit = data => {
             signInWithEmailAndPassword(data.email, data.password);
       }
+
       return (
             <div className='flex h-screen justify-center items-center'>
                   <div className="card w-96 bg-base-100 shadow-xl">
@@ -96,7 +100,7 @@ const Login = () => {
                                     {signInError}
                                     <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
                               </form>
-                              <p><small>New? <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                              <p><small>New to Doctors Portal <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
                               <div className="divider">OR</div>
                               <button
                                     onClick={() => signInWithGoogle()}

@@ -9,6 +9,7 @@ const Navbar = () => {
 
       const logout = () => {
             signOut(auth);
+            localStorage.removeItem('accessToken');
       };
       const menueItems = <>
             <li><Link to="/">Home</Link></li>
@@ -44,6 +45,13 @@ const Navbar = () => {
                               </ul>
                         </div>
 
+                  </div>
+
+
+
+                  <div className='navbar-end'>
+
+                        <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Dashboard</label>
                   </div>
             </div>
       );
