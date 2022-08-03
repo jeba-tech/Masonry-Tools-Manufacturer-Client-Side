@@ -68,7 +68,7 @@ const MyProfile = () => {
                                           </div>
                                           <p style={{ color: 'red' }}>{error}</p>
                                           <div className="form-control mt-6">
-                                                <button className="btn btn-primary form-submit" type="submit" >Purchase</button>
+                                                <button className="btn btn-primary form-submit" type="submit" >Update</button>
                                           </div>
                                     </form>
                               </div>

@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
+import React from 'react';
 import { useForm } from "react-hook-form";
 
-const AddReview = () => {
+const AddProduct = () => {
       const { register, handleSubmit } = useForm();
       const onSubmit = data => {
             console.log(data);
-            const url = `http://localhost:5000/reviews`;
+            const url = `http://localhost:5000/purchase`;
             fetch(url, {
                   method: 'POST',
                   headers: {
@@ -22,20 +19,18 @@ const AddReview = () => {
                   })
       };
       return (
-
-
             <div className="hero min-h-screen ">
 
                   <div className="hero-content flex-col lg:flex-row-reverse">
                         <div className="text-center lg:text-left px-8">
 
 
-                              <h1 className='text-5xl font-bold'>Give Us a Review</h1>
+                              <h1 className='text-5xl font-bold'>Add New Products</h1>
 
                         </div>
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                               <div className="card-body">
-                                    <h2 className='text-center form-title'> Review</h2>
+                                    <h2 className='text-center form-title'>Add products</h2>
                                     <form onSubmit={handleSubmit(onSubmit)}>
 
 
@@ -49,16 +44,34 @@ const AddReview = () => {
                                           </div>
                                           <div className="form-control">
                                                 <label className="label">
-                                                      <span className="label-text">Ratings</span>
+                                                      <span className="label-text">Price</span>
                                                 </label>
-                                                <input {...register("rating")} placeholder="Ratings out of 5" className="input input-bordered" required />
+                                                <input {...register("price")} placeholder="Price" className="input input-bordered" required />
                                           </div>
 
                                           <div className="form-control">
                                                 <label className="label">
-                                                      <span className="label-text">Your Thoughts</span>
+                                                      <span className="label-text">Available Quantity</span>
                                                 </label>
-                                                <textarea {...register("address")} placeholder="Write your thoughts...." className="input-bordered textarea" required></textarea>
+                                                <input {...register("quantity")} placeholder="Available Quantity" className="input-bordered textarea" required></input>
+                                          </div>
+                                          <div className="form-control">
+                                                <label className="label">
+                                                      <span className="label-text">Minimum Order Quantity</span>
+                                                </label>
+                                                <input {...register("minimumorderquantity")} placeholder="Minimum Order Quantity" className="input-bordered textarea" required></input>
+                                          </div>
+                                          <div className="form-control">
+                                                <label className="label">
+                                                      <span className="label-text">Description</span>
+                                                </label>
+                                                <input {...register("address")} placeholder="Product Description" className="input-bordered textarea" required></input>
+                                          </div>
+                                          <div className="form-control">
+                                                <label className="label">
+                                                      <span className="label-text">Picture URL</span>
+                                                </label>
+                                                <input {...register("photograph")} placeholder="Product Picture" className="input-bordered textarea" required></input>
                                           </div>
 
 
@@ -76,4 +89,4 @@ const AddReview = () => {
       );
 };
 
-export default AddReview;
+export default AddProduct;

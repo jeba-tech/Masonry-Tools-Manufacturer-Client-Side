@@ -2,31 +2,21 @@
       {
             "id": 1,
             "name": "Rimika Ghosh",
-            "rating": [
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "5"
-            ],
+            "rating": "5",
             "photograph": "https://i.ibb.co/1m659hZ/hand-hammer-500x500-1.png",
             "address": "Enjoyed staying: location is great, not far from a subway station and only 15 minutes ride from all the sights. There are lots of restaurants and shops nearby. Cheerful and welcoming atmosphere. Thanks for the hospitality. "
       },
       {
             "id": 2,
             "name": "Aftab Rahman",
-            "rating": [
-                  "1",
-                  "2",
-                  "3"
-            ],
+            "rating": "3",
             "photograph": "https://i.ibb.co/TH5qqV6/ox-p011112.jpg",
             "address": "Every hotel today should have an unspoken promise to provide a comfortable place to stay and a high level of customer service to each of its guests. If that promise is being met, let travelers know through review response."
       },
       {
             "id": 3,
             "name": "James Jeson",
-            "rating": [],
+            "rating": "2",
             "photograph": "https://i.ibb.co/Ssnczn2/masonry-tools-250x250.jpg",
             "address": "Thank you for finding the time to share the details of your recent visit. While we are delighted to learn that you found our spacious lobby to be remarkable and our guest service to be accommodating and friendly.!"
       }

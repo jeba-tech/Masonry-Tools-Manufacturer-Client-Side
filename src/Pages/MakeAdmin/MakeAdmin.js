@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
+import React from 'react';
 import { useForm } from "react-hook-form";
 
-const AddReview = () => {
+const MakeAdmin = () => {
       const { register, handleSubmit } = useForm();
       const onSubmit = data => {
             console.log(data);
@@ -22,20 +19,18 @@ const AddReview = () => {
                   })
       };
       return (
-
-
             <div className="hero min-h-screen ">
 
                   <div className="hero-content flex-col lg:flex-row-reverse">
                         <div className="text-center lg:text-left px-8">
 
 
-                              <h1 className='text-5xl font-bold'>Give Us a Review</h1>
+                              <h1 className='text-5xl font-bold'>Make New admin</h1>
 
                         </div>
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                               <div className="card-body">
-                                    <h2 className='text-center form-title'> Review</h2>
+                                    <h2 className='text-center form-title'>Create Admin</h2>
                                     <form onSubmit={handleSubmit(onSubmit)}>
 
 
@@ -76,4 +71,4 @@ const AddReview = () => {
       );
 };
 
-export default AddReview;
+export default MakeAdmin;
