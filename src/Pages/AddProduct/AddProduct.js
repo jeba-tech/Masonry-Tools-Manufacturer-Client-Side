@@ -5,7 +5,7 @@ const AddProduct = () => {
       const { register, handleSubmit } = useForm();
       const onSubmit = data => {
             console.log(data);
-            const url = `http://localhost:5000/purchase`;
+            const url = `https://mysterious-wildwood-50422.herokuapp.com/purchase`;
             fetch(url, {
                   method: 'POST',
                   headers: {

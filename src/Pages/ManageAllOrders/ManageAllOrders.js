@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 const ManageAllOrders = () => {
       const queryClient = new QueryClient()
 
-      const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/manageAllOrders')
+      const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://mysterious-wildwood-50422.herokuapp.com/manageAllOrders')
             .then(res => res.json()));
       if (isLoading) {
             return <Loading></Loading>

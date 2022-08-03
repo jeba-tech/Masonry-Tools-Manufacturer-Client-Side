@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useServices = () => {
       const [tools, setTools] = useState([]);
       useEffect(() => {
-            fetch('http://localhost:5000/purchase')
+            fetch('https://mysterious-wildwood-50422.herokuapp.com/purchase')
                   .then(res => res.json())
                   .then(data => setTools(data));
       }, []);

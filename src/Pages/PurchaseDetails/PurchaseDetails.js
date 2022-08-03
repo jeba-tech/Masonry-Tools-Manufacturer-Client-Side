@@ -5,7 +5,7 @@ const PurchaseDetails = () => {
       const { toolId } = useParams();
       const [tool, setBook] = useState({});
       useEffect(() => {
-            const url = `http://localhost:5000/purchaseDetails/${toolId}`;
+            const url = `https://mysterious-wildwood-50422.herokuapp.com/purchaseDetails/${toolId}`;
             fetch(url)
                   .then(res => res.json())
                   .then(data => setBook(data));
