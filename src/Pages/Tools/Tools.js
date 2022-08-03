@@ -5,11 +5,11 @@ import './Tools.css';
 
 const Tools = () => {
 
-      const [tools, setBooks] = useState([]);
+      const [tools, setTools] = useState([]);
       useEffect(() => {
             fetch('http://localhost:5000/purchase')
                   .then(res => res.json())
-                  .then(data => setBooks(data));
+                  .then(data => setTools(data));
       }, [])
       return (
             <div id='books'>
