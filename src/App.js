@@ -35,9 +35,9 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="tools" element={<Tools></Tools>} />
-        <Route path="myPortfolio" element={<MyPortfolio></MyPortfolio>} />
+        {/* <Route path="myPortfolio" element={<MyPortfolio></MyPortfolio>} /> */}
         <Route path="contact" element={<Contact></Contact>} />
-        <Route path="/blogs" element={<Blogs />}></Route>
+        {/* <Route path="/blogs" element={<Blogs />}></Route> */}
         <Route path="purchase/:toolId" element={
           <RequireAuth>
             <Purchase></Purchase>
